@@ -26,20 +26,24 @@ Data is acquired from Food and Agricultural Organization's website [FAO](http://
 
 Data downloaded was in zip format and it was further extracted into csv.
 
-![FAO Data](\data\fao.png)
+![FAO Data](/data/fao.png)
 
 Refine
 ------
 
-Downloaded data had to be refined since its struture was completely unusable for this analysis. Extracted zip file was exceeding 1 GB and it required a lot of normalization to be done before using it in R. So I used an SQL database to normalize this data and convert it into R friendly csv data that can be read into a dataframe.
+Downloaded data had to be refined since its struture was completely unusable for this analysis. Extracted zip file was exceeding 1 GB and it required a lot of 
 
-***Downloaded data*** ![Downloaded data](\data\downloadeddata.png)
+normalization to be done before using it in R. So I used an SQL database to normalize this data and convert it into R friendly csv data that can be read into a 
 
-***SQLite Database for FAO data*** ![SQLite Database for FAO data](\data\sqldb.png)
+dataframe.
 
-***Refined csv data*** ![CSV data](\data\csv.png)
+***Downloaded data*** ![Downloaded data](/data/downloadeddata.png)
 
-[Input csv file](\data\data\FoodBalanceSheet.csv)
+***SQLite Database for FAO data*** ![SQLite Database for FAO data](/data/sqldb.png)
+
+***Refined csv data*** ![CSV data](/data/csv.png)
+
+[Input csv file](/data/FoodBalanceSheet.csv)
 
 Transform
 ---------
@@ -158,7 +162,9 @@ function(input, output, session)
   )
   
   output$heat<-renderD3heatmap({
-    d3heatmap(sortdt(), scale = "row" , colors="Set3",cexRow = 0.8,cexCol = 1,labCol=c("Agriculture","Organic","FoodSupply","PlantedForest","PrimaryForest","InlandWater","Forest","Waste","Production","FoodSupply","Population"),labRow= dates())
+    d3heatmap(sortdt(), scale = "row" , colors="Set3",cexRow = 0.8,cexCol = 1,labCol=c
+
+("Agriculture","Organic","FoodSupply","PlantedForest","PrimaryForest","InlandWater","Forest","Waste","Production","FoodSupply","Population"),labRow= dates())
   })
   
   output$parallel<-renderDygraph(
@@ -178,15 +184,15 @@ Graphs as mentioned in the above section were created to explore data interactiv
 
 ***1. Heatmap Tab:***
 
-![Heatmap](\data\heatmap.png)
+![Heatmap](/data/heatmap.png)
 
 ***2. Crosstalk Tab:***
 
-![Crosstalk](\data\crosstalk.png)
+![Crosstalk](/data/crosstalk.png)
 
 ***3. Three-dimensional View Tab:***
 
-![3D View](\data\cube.png)
+![3D View](/data/cube.png)
 
 Model
 -----
@@ -201,25 +207,25 @@ Explanation: Autoregressice integrated movind average model is fitted to time se
 
 3.  The data values have been replaced with the difference between their values and the previous values.
 
-![Forecast](\data\forecast.png)
+![Forecast](/data/forecast.png)
 
 Communicate Insight
 -------------------
 
 From the below charts, trends of Earth's forecasted data until 2023 are as follows: --Select any country--
 
-1.  Agricultural area is becoming less in some countries where as it is increasing in other countries. ![Agriculture](\data\agri.png)
+1.  Agricultural area is becoming less in some countries where as it is increasing in other countries. ![Agriculture](/data/agri.png)
 
 2.  Population trend in various countries seem to be uniformly increasing.
-    ![Population](\data\population.png)
+    ![Population](/data/population.png)
 
-3.  Production of food seems to be uniformly increasing. ![Production](\data\production.png)
+3.  Production of food seems to be uniformly increasing. ![Production](/data/production.png)
 
-4.  Forest either seems to be decreasing or remaining stable in various countries but no evident increase. ![Forest](\data\forest.png)
+4.  Forest either seems to be decreasing or remaining stable in various countries but no evident increase. ![Forest](/data/forest.png)
 
-5.  There is no significant increase in planted forest across the world. ![Plants](\data\planted.png)
+5.  There is no significant increase in planted forest across the world. ![Plants](/data/planted.png)
 
-6.  Food wasted across the world is following a stable trend in parallel to the production. ![Waste](\data\waste.png)
+6.  Food wasted across the world is following a stable trend in parallel to the production. ![Waste](/data/waste.png)
 
 Appendix
 --------
@@ -306,7 +312,9 @@ navbarPage("Sulekha Aloorravi - Food & Agriculture Org",theme = shinytheme("flat
     tabPanel("Forecast",
     sidebarPanel(width=2,
     selectInput("areafc", label = "Select Country", choices = c(Area), selected = "India"),
-    selectInput("selectionfc", label = "Select Category", choices = c("Population","Food Availability","Agricultural Area", "Forest Area", "Inland Water Area", "Organic Farming", "Planted Forest", "Production", "Waste", "Food Supply per Capita"), selected = "Agricultural Area"),
+    selectInput("selectionfc", label = "Select Category", choices = c("Population","Food Availability","Agricultural Area", "Forest Area", "Inland Water Area", 
+
+"Organic Farming", "Planted Forest", "Production", "Waste", "Food Supply per Capita"), selected = "Agricultural Area"),
     helpText("Select each country and each category to see its forecasted data until 2023"),
     helpText("Data is forecasted based on Arima (Auto Regressive Moving Average) model"),
     helpText("Chart 1 is an interactive stacked time series graph"),
@@ -355,7 +363,9 @@ function(input, output, session)
     }
   )
   output$heat<-renderD3heatmap({
-  d3heatmap(sortdt(), scale = "row" , colors="Set3",cexRow = 0.8,cexCol = 1,labCol=c("Agriculture","Organic","FoodSupply","PlantedForest","PrimaryForest","InlandWater","Forest","Waste","Production","FoodSupply","Population"),labRow= dates())
+  d3heatmap(sortdt(), scale = "row" , colors="Set3",cexRow = 0.8,cexCol = 1,labCol=c
+
+("Agriculture","Organic","FoodSupply","PlantedForest","PrimaryForest","InlandWater","Forest","Waste","Production","FoodSupply","Population"),labRow= dates())
   })
   output$parallel<-renderDygraph(
   dygraph(fb2[fb2$Area==cty(),12], main = "Drag for more details") %>% 
