@@ -10,7 +10,7 @@ Sulekha Aloorravi
 <https://sulekhaaloorravi.github.io/ShinyDashboard/>
 
 ### R code in Github:
-</code>
+<https://github.com/sulekhaaloorravi/ShinyDashboard/tree/master/code>
 
 ### Frame - Problem Statement
 
