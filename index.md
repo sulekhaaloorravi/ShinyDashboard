@@ -10,7 +10,7 @@ Sulekha Aloorravi
 <https://sulekhaaloorravi.github.io/ShinyDashboard/>
 
 ### R code in Github:
-<https://github.com/sulekhaaloorravi/ShinyDashboard/tree/master/code>
+</code>
 
 ### Frame - Problem Statement
 
@@ -38,13 +38,13 @@ normalization to be done before using it in R. So I used an SQL database to norm
 
 dataframe.
 
-***Downloaded data*** ![Downloaded data](https://github.com/sulekhaaloorravi/ShinyDashboard/tree/master/data/downloadeddata.png)
+***Downloaded data*** ![Downloaded data](/data/downloadeddata.png)
 
-***SQLite Database for FAO data*** ![SQLite Database for FAO data](https://github.com/sulekhaaloorravi/ShinyDashboard/tree/master/data/sqldb.png)
+***SQLite Database for FAO data*** ![SQLite Database for FAO data](/data/sqldb.png)
 
-***Refined csv data*** ![CSV data](https://github.com/sulekhaaloorravi/ShinyDashboard/tree/master/data/csv.png)
+***Refined csv data*** ![CSV data](/data/csv.png)
 
-[Input csv file](https://github.com/sulekhaaloorravi/ShinyDashboard/tree/master/data/FoodBalanceSheet.csv)
+[Input csv file](/data/FoodBalanceSheet.csv)
 
 Transform
 ---------
@@ -185,15 +185,15 @@ Graphs as mentioned in the above section were created to explore data interactiv
 
 ***1. Heatmap Tab:***
 
-![Heatmap](https://github.com/sulekhaaloorravi/ShinyDashboard/tree/master/data/heatmap.png)
+![Heatmap](/data/heatmap.png)
 
 ***2. Crosstalk Tab:***
 
-![Crosstalk](https://github.com/sulekhaaloorravi/ShinyDashboard/tree/master/data/crosstalk.png)
+![Crosstalk](/data/crosstalk.png)
 
 ***3. Three-dimensional View Tab:***
 
-![3D View](https://github.com/sulekhaaloorravi/ShinyDashboard/tree/master/data/cube.png)
+![3D View](/data/cube.png)
 
 Model
 -----
@@ -208,31 +208,25 @@ Explanation: Autoregressice integrated movind average model is fitted to time se
 
 3.  The data values have been replaced with the difference between their values and the previous values.
 
-![Forecast](https://github.com/sulekhaaloorravi/ShinyDashboard/tree/master/data/forecast.png)
+![Forecast](/data/forecast.png)
 
 Communicate Insight
 -------------------
 
 From the below charts, trends of Earth's forecasted data until 2023 are as follows: --Select any country--
 
-1.  Agricultural area is becoming less in some countries where as it is increasing in other countries. ![Agriculture]
-
-(https://github.com/sulekhaaloorravi/ShinyDashboard/tree/master/data/agri.png)
+1.  Agricultural area is becoming less in some countries where as it is increasing in other countries. ![Agriculture](/data/agri.png)
 
 2.  Population trend in various countries seem to be uniformly increasing.
-    ![Population](https://github.com/sulekhaaloorravi/ShinyDashboard/tree/master/data/population.png)
+    ![Population](/data/population.png)
 
-3.  Production of food seems to be uniformly increasing. ![Production](https://github.com/sulekhaaloorravi/ShinyDashboard/tree/master/data/production.png)
+3.  Production of food seems to be uniformly increasing. ![Production](/data/production.png)
 
-4.  Forest either seems to be decreasing or remaining stable in various countries but no evident increase. ![Forest]
+4.  Forest either seems to be decreasing or remaining stable in various countries but no evident increase. ![Forest](/data/forest.png)
 
-(https://github.com/sulekhaaloorravi/ShinyDashboard/tree/master/data/forest.png)
+5.  There is no significant increase in planted forest across the world. ![Plants](/data/planted.png)
 
-5.  There is no significant increase in planted forest across the world. ![Plants](https://github.com/sulekhaaloorravi/ShinyDashboard/tree/master/data/planted.png)
-
-6.  Food wasted across the world is following a stable trend in parallel to the production. ![Waste]
-
-(https://github.com/sulekhaaloorravi/ShinyDashboard/tree/master/data/waste.png)
+6.  Food wasted across the world is following a stable trend in parallel to the production. ![Waste](/data/waste.png)
 
 Appendix
 --------
