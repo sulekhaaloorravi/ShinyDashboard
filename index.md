@@ -27,7 +27,7 @@ Data is acquired from Food and Agricultural Organization's website [FAO](http://
 
 Data downloaded was in zip format and it was further extracted into csv.
 
-![FAO Data](https://github.com/sulekhaaloorravi/ShinyDashboard/tree/master/data/fao.png)
+![FAO Data](/data/fao.png)
 
 Refine
 ------
